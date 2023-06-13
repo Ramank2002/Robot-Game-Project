@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancho Lab's Robot Game </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startGame()">
+    <body onload="startGame()">
+        <div class="top">
+            <div class="header">
+                <div class="name">
+                </div>
+                <div class="header-circle1"></div>
+                <div class="header-circle2"></div>
+                <div class="header-circle3"></div>
+                <div class="header-circle4"></div>
+                <div class="header-circle5"></div>
+                <div class="header-circle6"></div>
+                <div class="header-circle7"></div>
+                <div class="header-circle8"></div>
+                <div class="header-circle9"></div>
+                <div class="header-circle10"></div>
+                <div class="header-circle11"></div>
+                <div class="header-circle12"></div>
+                <div class="header-circle13"></div>
+                <div class="header-circle14"></div>
+                <span class="v1_94">1</span>
+                <span class="v1_95">2</span>
+                <span class="v1_96">3</span>
+                <span class="v1_97">4</span>
+                <span class="v1_98">5</span>
+                <span class="v1_99">6</span>
+                <span class="v1_100">7</span>
+                <span class="v1_101">8</span>
+                <span class="v1_102">9</span>
+                <span class="v1_103">10</span>
+                <span class="v1_104">11</span>
+                <span class="v1_105">12</span>
+                <span class="v1_106">13</span>
+            </div>
+            <div class="logo">
+                <span class="logo-text">Build</span>
+                <div class="logo-img"></div>
+            </div>
+    <canvas id="canvas" >
+    </canvas>
+    <canvas id="grid"></canvas>
+    <div id="displayBox">
+        
+        <textarea id="freeform" name="freeform" rows="4" cols="50" >
+        </textarea>
+    </div>
+    <!-- <label for="freeform">Tell us how you heard about HubSpot:</label> -->
+    <!-- <br> -->
+    <!-- <div class="control-buttons">
+        <button id="upButton" onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button>
+        <button id="leftButton" onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+        <button id="rightButton" onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
+        <button id="downButton" onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+        <button id="resetButton" onclick="resetDisplay()">Reset</button>
+
+    </div> -->
+    <!-- <div class="v1_12">
+        <div class="v1_13">
+            <div class="robot-img"></div>
+        </div> -->
+        <!-- <div class="v1_15"></div>
+        <div class="v1_16"></div>
+        <div class="v1_14"></div>
+        <div class="v1_17"></div>
+        <div class="v1_18"></div>
+        <div class="v1_19"></div>
+        <div class="v1_20"></div>
+        <div class="v1_21"></div>
+        <div class="v1_22"></div>
+        <div class="v1_23"></div>
+        <div class="v1_24"></div>
+        <div class="v1_25"></div>
+        <div class="v1_26"></div>
+        <div class="v1_27"></div>
+        <div class="v1_29"></div>
+        <div class="v1_30"></div>
+        <div class="v1_31"></div>
+        <div class="v1_32"></div>
+        <div class="v1_28"></div> -->
+        <div class="v1_34">
+            <span class="v1_36">Instruction Implemented</span>
+            <!-- <div class="v1_35"> -->
+                <!-- <div class="name"></div> -->
+            <!-- </div> -->
+            <!-- <span class="robot-text">Robot Move Left</span>
+            <span class="robot-text"><br>Robot Move Up</span>
+            <span class="robot-text"><br><br>Robot Move Left</span>
+            <span class="robot-text"><br><br><br>Robot Move left</span>
+            <span class="robot-text"><br><br><br><br>Robot Move Down</span>
+            <span class="robot-text"><br><br><br><br><br>Robot Move Left</span>
+            <span class="robot-text"><br><br><br><br><br><br>Robot Move Up</span> 
+            <span class="v1_46"><br>.....Robot reached the destination</span> -->
+        </div>
+    </div>
+    <div class="v1_7">
+        <div class="v1_62"></div>
+        <div class="v1_63"></div>
+        <div class="v1_64"></div>
+        <div class="v1_65"></div>
+        <div class="v1_78"></div>
+        <div class="v1_79"></div>
+        <div class="v1_80"></div>
+        <div class="v1_81"></div>
+        <div class="v1_82"></div>
+        <div class="v1_83"></div>
+        <div class="v1_84"></div>
+        <div class="v1_85"></div>
+        <div class="v1_86"></div>
+        <span class="v1_87">Logic Panel</span>
+    </div>
+</div>
+  </div>
+    <div class="footer">
+        <button class="v1_88" id="leftButton" onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">
+            <div class="v1_111">
+                <div class="v1_110"></div>
+            </div>
+        </button>
+        <button class="v1_89" id="upButton" onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">
+            <div class="v1_114">
+                <div class="v1_113"></div>
+                </div>
+            </button>
+            <button class="v1_90" id="downButton" onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">
+            <div class="v1_117">
+                <div class="v1_116"></div>
+            </div>
+        </button>
+        <button class="v1_91" id="rightButton" onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">
+            <div class="v1_120">
+                <div class="v1_119"></div>
+            </div>
+        </button>
+        <div class="v1_92"><span class="play-text">Play</span></div>
+        <div class="v1_93" id="resetButton" onClick="window.location.reload()">
+            <div class="reset-img">
+                <div class="reset"></div>
+            </div>
+        </div>
+        <div class="play-img">
+            <div class="play"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
